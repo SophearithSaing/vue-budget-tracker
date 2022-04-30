@@ -8,12 +8,10 @@
 </template>
 
 <script>
-import Card from 'primevue/card';
 import ProgressBar from 'primevue/progressbar';
 
 export default {
   components: {
-    Card,
     ProgressBar,
   },
 };
