@@ -35,4 +35,23 @@ nav {
     }
   }
 }
+
+// Overwrite primevue
+.record {
+  .p-tabview-nav {
+    justify-content: center;
+  }
+  .p-tabview-nav-link {
+    gap: 8px;
+    align-items: flex-start;
+  }
+  &__form {
+    input {
+      width: 100%;
+    }
+    button {
+      min-width: 35px;
+    }
+  }
+}
 </style>
