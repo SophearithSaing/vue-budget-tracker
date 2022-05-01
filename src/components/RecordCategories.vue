@@ -1,7 +1,7 @@
 <template>
   <TreeSelect
     v-model="selectedNode"
-    :options="nodes"
+    :options="type === 'expense' ? expenseCategories : incomeCategories"
     placeholder="Select Item"
   />
 </template>
@@ -13,21 +13,31 @@ export default {
   components: {
     TreeSelect,
   },
+  props: ['type'],
   data() {
     return {
-      nodes: null,
+      expenseCategories: null,
+      incomeCategories: null,
     };
   },
   methods: {
-    getTreeNodes() {
-      return fetch('data/categories.json')
+    getExpenseCategories() {
+      return fetch('data/expenseCategories.json')
+        .then((res) => res.json())
+        .then((data) => data.categories);
+    },
+    getIncomeCategories() {
+      return fetch('data/incomeCategories.json')
         .then((res) => res.json())
         .then((data) => data.categories);
     },
   },
   mounted() {
-    this.getTreeNodes().then((data) => {
-      this.nodes = data;
+    this.getExpenseCategories().then((data) => {
+      this.expenseCategories = data;
+    });
+    this.getIncomeCategories().then((data) => {
+      this.incomeCategories = data;
     });
   },
 };

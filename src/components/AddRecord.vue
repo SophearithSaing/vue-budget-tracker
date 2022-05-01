@@ -8,7 +8,7 @@
             <span>Expense</span>
           </template>
           <form class="record__form">
-            <RecordCategories class="record__form--categories" />
+            <RecordCategories class="record__form--categories" type="expense" />
             <div class="record__form--amount">
               <InputNumber
                 id="stacked"
@@ -32,7 +32,7 @@
             <span>Income</span>
           </template>
           <form class="record__form">
-            <RecordCategories class="record__form--categories" />
+            <RecordCategories class="record__form--categories" type="income" />
             <div class="record__form--amount">
               <InputNumber
                 id="stacked"
