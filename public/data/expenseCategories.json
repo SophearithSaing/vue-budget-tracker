@@ -21,6 +21,28 @@
           "icon": "pi pi-fw pi-home"
         }
       ]
+    },
+    {
+      "key": "1",
+      "label": "Shopping",
+      "icon": "pi pi-fw pi-inbox",
+      "children": [
+        {
+          "key": "1-0",
+          "label": "Clothes",
+          "icon": "pi pi-fw pi-shopping-bag"
+        },
+        {
+          "key": "1-1",
+          "label": "Electronics",
+          "icon": "pi pi-fw pi-phone"
+        },
+        {
+          "key": "1-2",
+          "label": "Gifts",
+          "icon": "pi pi-fw pi-envelope"
+        }
+      ]
     }
   ]
 }
